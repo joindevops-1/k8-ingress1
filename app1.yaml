@@ -44,10 +44,13 @@ metadata:
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/tags: Environment=dev,Team=test
     alb.ingress.kubernetes.io/group.name: joindevops
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:315069654700:certificate/f2f0937c-825f-4049-ae2d-286c0cde5864
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS": 443}]'
+
 spec:
   ingressClassName: alb
   rules:
-  - host: "app1.daws78s.online" # ALB Rule
+  - host: "app1.daws81s.online" # ALB Rule
     http:
       paths:
       - pathType: Prefix
